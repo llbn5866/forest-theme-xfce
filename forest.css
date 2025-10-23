@@ -1,0 +1,40 @@
+:root {
+    --tridactyl-font-family: "Terminess Nerd Font Propo Regular", sans-serif;
+    --tridactyl-status-font-family: "Terminess Nerd Font Propo Regular", "Terminess Nerd Font";
+    --tridactyl-bg: #3c1928;
+    --tridactyl-fg: #bfc282;
+    --tridactyl-scrollbar-color: var(--tridactyl-fg);
+    --tridactyl-border-raidus: 0px;
+    --tridactyl-cmdl-bg: var(--tridactyl-bg);
+    --tridactyl-cmdl-fg: var(--tridactyl-fg);
+    --tridactyl-cmdl-font-family: "Terminess Nerd Font Propo Regular", monospace;
+    --tridactyl-cmdl-font-size: var(--tridactyl-cmplt-font-size);
+}
+
+:root.TridactylOwnNamespace {
+    scrollbar-color: var(--tridactyl-scrollbar-color);
+    scrollbar-width: thin;
+}
+
+:root #completions .sectionHeader {
+    display: none;
+}
+
+:root #tridactyl-colon::before {
+    content: ": ";
+}
+
+:root #completions .focused,
+:root #completions .focused .url {
+    background: var(--tridactyl-bg);
+    text-decoration: underline;
+}
+
+:root #cmdline_iframe {
+    position: fixed !important;
+    bottom: unset;
+    top: 0% !important;
+    left: 0% !important;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px !important;
+    opacity: 0.9;
+}
